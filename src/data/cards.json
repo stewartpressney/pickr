@@ -1,0 +1,39 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "name": "Earl's Downtown",
+            "img": "http://w.rollout.ca/images/custom/Earls02.jpg",
+            "style": "Casual",
+            "price": "$$$"
+        },
+        {
+            "id": 2,
+            "name": "Pokerito",
+            "img": "https://i.pinimg.com/originals/c2/e9/5e/c2e95e03570150968471e47e2cf05f03.jpg",
+            "style": "Seafood",
+            "price": "$"
+        },
+        {
+            "id": 3,
+            "name": "Steamwork's Pub ",
+            "img": "http://www.steamworks.com/sites/default/files/Steamworks-PUB.jpg",
+            "style": "Casual",
+            "price": "$$"
+        },
+        {
+            "id": 4,
+            "name": "Banana Leaf",
+            "img": "https://static1.squarespace.com/static/561ebe6de4b043ff3d74da27/t/561ff2fce4b0662b883e109b/1444934511103/IMG_2945.JPG?format=2500w",
+            "style": "Malyasian",
+            "price": "$$"
+        },
+        {
+            "id": 5,
+            "name": "Tap & Barrel",
+            "img": "https://res.cloudinary.com/simpleview/image/upload/crm/vancouverbc/tap-tap003-interior-16-1-_5FF06C8F-6EFC-4430-9AED2564A39E6151_88b1919b-d11a-488d-a30e805f5d1a176f.jpg",
+            "style": "Casual",
+            "price": "$$"
+        }
+    ]
+}
