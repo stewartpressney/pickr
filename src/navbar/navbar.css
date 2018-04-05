@@ -1,0 +1,12 @@
+.nav{
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+}
+
+.logo{
+  text-align: left;
+  padding-left: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+}

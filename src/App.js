@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './card/card';
 import PickButton from './pickButton/pickButton';
+import Navbar from './navbar/navbar';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { firebaseConfig } from './config/firebase/dbconfig';
+
 
 
 
@@ -59,6 +61,7 @@ getRandomCard(currentCards){
   render() {
     return (
       <div className="App">
+      <Navbar className="Navbar" />
       <div className="cardRow">
       <Card name={this.state.currentCard.name}
             img={this.state.currentCard.img}
