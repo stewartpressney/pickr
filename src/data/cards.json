@@ -4,36 +4,70 @@
             "id": 1,
             "name": "Earl's Downtown",
             "img": "http://w.rollout.ca/images/custom/Earls02.jpg",
-            "style": "Casual",
-            "price": "$$$"
+            "style": "Drinks",
+            "deal": "2 cocktails and an appie after 6:00pm",
+            "price": "$12.99",
+            "location": "905 Hornby St",
+            "tags": ["#happyhour", "#Downtown"]
         },
         {
             "id": 2,
             "name": "Pokerito",
             "img": "https://i.pinimg.com/originals/c2/e9/5e/c2e95e03570150968471e47e2cf05f03.jpg",
-            "style": "Seafood",
-            "price": "$"
+            "style": "Restaurant",
+            "deal": "2 tuna bowls for 10% off",
+            "price": "$18.99",
+            "location": "558 Dunsmuir St",
+            "tags": ["#healthy", "#seafood"]
         },
         {
             "id": 3,
             "name": "Steamwork's Pub ",
             "img": "http://www.steamworks.com/sites/default/files/Steamworks-PUB.jpg",
-            "style": "Casual",
-            "price": "$$"
+            "style": "Restaurant",
+            "deal": "Crab Dip & drinks for 2!",
+            "price": "$15.00",
+            "location": "123 W Pender St",
+            "tags": ["#pub", "#drinks"]
         },
         {
             "id": 4,
             "name": "Banana Leaf",
             "img": "https://static1.squarespace.com/static/561ebe6de4b043ff3d74da27/t/561ff2fce4b0662b883e109b/1444934511103/IMG_2945.JPG?format=2500w",
-            "style": "Malyasian",
-            "price": "$$"
+            "style": "Restaurant",
+            "deal": "Tasting menu 10% off",
+            "price": "$13.00 /per person",
+            "location": "1043 Davie St",
+            "tags": ["#datenight"]
         },
         {
             "id": 5,
             "name": "Tap & Barrel",
             "img": "https://res.cloudinary.com/simpleview/image/upload/crm/vancouverbc/tap-tap003-interior-16-1-_5FF06C8F-6EFC-4430-9AED2564A39E6151_88b1919b-d11a-488d-a30e805f5d1a176f.jpg",
-            "style": "Casual",
-            "price": "$$"
+            "style": "Restaurant",
+            "deal": "Burger & Beer's for 2",
+            "price": "$20.00",
+            "location": "1 Athletes Way",
+            "tags": ["#pub", "#local"]
+        },
+        {
+            "id": 6,
+            "name": "Celebrities Nightclub",
+            "img": "http://www.shopswindows.com/wp-content/uploads/2014/11/lux2.jpg",
+            "style": "Events",
+            "deal": "2 cocktails and an appie after 6:00pm",
+            "price": "$12.99",
+            "location": "905 Hornby St",
+            "tags": ["#nightlife", "#nightclub"]
         }
-    ]
+    ],
+
+    "place": [
+        {
+        "placeID": 1,
+        "name": "lamplighter",
+        "address":
+        }
+
+    ],
 }

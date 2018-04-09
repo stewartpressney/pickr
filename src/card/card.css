@@ -1,19 +1,21 @@
 .card-container {
   cursor: pointer;
+  border-radius: 10px;
   height: 400px;
   width: 400px;
   perspective: 800px;
   position: relative;
   margin: auto;
-  transition: all 0.4s ease-in-out;
+  margin-top: 4%;
+  transition: all 0.6s ease-in-out;
   transform-style: preserve-3d;
 }
 
 .card {
   height: 400px;
   width: 400px;
+  border-radius: 10px;
   position: absolute;
-  border: 1px solid #300;
   background: none;
   transform-style: preserve-3d;
 }
@@ -21,6 +23,9 @@
 .card .back {
   height: 400px;
   width: 400px;
+  background-color: #F5FAFA;
+  border: 4px solid #0288D1;
+  border-radius: 10px;
   opacity: 0;
   transform: rotateX(180deg);
   transform-style: preserve-3d;
@@ -31,7 +36,7 @@
 }
 
 .card-container:hover .card .back {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease-in-out;
   opacity: 1;
 }
 
@@ -47,10 +52,10 @@
 .name{
   color: #333;
   text-align: left;
-  font-size: 2em;
-  padding-top: 20%;
+  font-family: 'Arvo';
+  font-size: 2.5em;
+  padding-top: 4%;
   padding-left: 10%;
-
 }
 
 .style{
@@ -61,11 +66,28 @@
   padding-left: 10%;
 }
 
+.deal{
+  color: #333;
+  text-align: left;
+  font-family: 'Arvo';
+  font-size: 1.5em;
+  padding-top: 2%;
+  padding-left: 10%;
+}
+
 .price{
     color: #333;
     text-align: left;
     font-size: 1em;
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
+.location {
+    color: #333;
+    text-align: left;
+    font-size: 1em;
+    padding-top: 2%;
     padding-left: 10%;
 }
 
@@ -73,12 +95,15 @@
     color: #333;
     text-align: left;
     font-size: 1em;
-    padding-top: 5%;
+    padding-top: 2%;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 400px;
   height: 400px;
 }
 

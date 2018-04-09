@@ -14,7 +14,7 @@ class PickButton extends Component{
 render(props){
   return(
     <div className="buttonContainer">
-      <button className="btn" onClick={this.drawCard}>NEXT</button>
+      <button className="button" onClick={this.drawCard}>NEXT</button>
     </div>
     )
   }

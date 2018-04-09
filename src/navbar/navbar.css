@@ -1,12 +1,15 @@
 .nav{
   overflow: hidden;
-  background-color: #333;
+  background-color: #0288D1;;
   color: white;
+  height: 80px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .logo{
   text-align: left;
   padding-left: 20px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 2em;
 }
