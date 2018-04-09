@@ -1,5 +1,5 @@
 import React from 'react';
-import './addPlace.css';
+import './addDeal.css';
 
 const AddDeal = (props) => (
 
@@ -10,24 +10,25 @@ const AddDeal = (props) => (
     <input type="text" name="img" placeholder="Copy an Img URL"></input>
     <input type="text" name="price" placeholder="Deal Price ($22.22)"></input>
 
-  <select name="Business">
-    <option value="1">Steamworks Pub</option>
-    <option value="2">Lamplighter Pub</option>
-    <option value="3">Noodlebox</option>
-    <option value="4">Local</option>
-  </select>
+      <select name="Business">
+        <option value="1">Steamworks Pub</option>
+        <option value="2">Lamplighter Pub</option>
+        <option value="3">Noodlebox</option>
+        <option value="4">Local</option>
+      </select>
 
 
     <div id="stylename">
     <label>Catagory</label>
       <ul>
-        <li><input type="checkbox" />Food</li>
-        <li><input type="checkbox" />Drinks</li>
-        <li><input type="checkbox" />Date</li>
-        <li><input type="checkbox" />Fun</li>
-        <li><input type="checkbox" />Group</li>
+        <li><input type="checkbox"/>Food</li>
+        <li><input type="checkbox"/>Drinks</li>
+        <li><input type="checkbox"/>Date</li>
+        <li><input type="checkbox"/>Fun</li>
+        <li><input type="checkbox"/>Group</li>
       </ul>
   </div>
+
   </form>
 </div>
 
