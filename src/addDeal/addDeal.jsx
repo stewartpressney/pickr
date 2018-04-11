@@ -10,22 +10,33 @@ const AddDeal = (props) => (
     <input type="text" name="img" placeholder="Copy an Img URL"></input>
     <input type="text" name="price" placeholder="Deal Price ($22.22)"></input>
 
-      <select name="Business">
-        <option value="1">Steamworks Pub</option>
-        <option value="2">Lamplighter Pub</option>
-        <option value="3">Noodlebox</option>
-        <option value="4">Local</option>
+      <select name="business">
+        <option value="1">Steamworks Pub & Brewery</option>
+        <option value="2">The Lamplighter Public House</option>
       </select>
 
 
-    <div id="stylename">
-    <label>Catagory</label>
+    <div id="stylename" name="stylename">
+    <label>Style of Deal</label>
       <ul>
-        <li><input type="checkbox"/>Food</li>
-        <li><input type="checkbox"/>Drinks</li>
-        <li><input type="checkbox"/>Date</li>
-        <li><input type="checkbox"/>Fun</li>
-        <li><input type="checkbox"/>Group</li>
+        <li><input type="checkbox" value="Food"/>Food</li>
+        <li><input type="checkbox" value="Drinks"/>Drinks</li>
+        <li><input type="checkbox" value="Date"/>Date</li>
+        <li><input type="checkbox" value="Fun"/>Fun</li>
+        <li><input type="checkbox" value="Group"/>Group</li>
+      </ul>
+  </div>
+
+  <div id="daysAvailable" name="daysAvailable">
+    <label>Days Avalable</label>
+      <ul>
+        <li><input type="checkbox" value="Mon"/>Mon</li>
+        <li><input type="checkbox" value="Tue"/>Tue</li>
+        <li><input type="checkbox" value="Wed"/>Wed</li>
+        <li><input type="checkbox" value="Thu"/>Thu</li>
+        <li><input type="checkbox" value="Fri"/>Fri</li>
+        <li><input type="checkbox" value="Sat"/>Sat</li>
+        <li><input type="checkbox" value="Sun"/>Sun</li>
       </ul>
   </div>
 

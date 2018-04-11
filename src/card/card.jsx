@@ -8,7 +8,6 @@ const Card = (props) => (
         <div className="img" alt=""><img src={props.img}/></div>
       </div>
       <div className="back">
-        {/*<div className="featureImg" alt=""><img src={props.img}/></div>*/}
         <div className="name">{props.name}</div>
         <div className="deal">{props.deal}</div>
         <div className="style">{props.style}</div>

@@ -29,3 +29,38 @@
     margin-right: 20%;
   }
 
+.placeButton {
+  padding: 6px;
+  border-radius: 5px;
+  background: #006e2e; /* Old browsers */
+  background: -moz-linear-gradient(top, #006e2e 0%, #005132 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #006e2e 0%,#005132 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #006e2e 0%,#005132 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: white;
+}
+
+.placeButton:hover{
+  background: #006e2e; /* Old browsers */
+  background: -moz-linear-gradient(top, #005132 0%, #006e2e 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #005132 0%, #006e2e 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #005132 0%, #006e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+.dealButton {
+  padding: 6px;
+  border-radius: 5px;
+  background: #006e2e; /* Old browsers */
+  background: -moz-linear-gradient(top, #006e2e 0%, #005132 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #006e2e 0%,#005132 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #006e2e 0%,#005132 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: white;
+}
+
+.dealButton:hover{
+  background: #006e2e; /* Old browsers */
+  background: -moz-linear-gradient(top, #005132 0%, #006e2e 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #005132 0%, #006e2e 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #005132 0%, #006e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
