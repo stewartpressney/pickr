@@ -35,7 +35,7 @@ class AddDeal extends Component {
         price: this.state.price,
         style: this.state.style,
         daysAvalable: this.state.daysAvalable,
-        placeid: this.state.placeid,
+        placeid: this.props.placeid,
       }
       dealsRef.push(deal);
       this.setState({
@@ -103,13 +103,14 @@ class AddDeal extends Component {
       });
     }
 
-    placeChanged = (event) => {
-      this.setState({
-        placeid: event.target.value
-      });
-    }
+    // placeChanged = (event) => {
+    //   this.setState({
+    //     placeid: event.target.value
+    //   });
+    // }
 
     render() {
+      var myDeals = this.state.deals.filter(deal => deal.placeid === this.props.placeid);
       return (
         <div className='newDeal'>
           <header>
@@ -155,38 +156,34 @@ class AddDeal extends Component {
                         <label><Checkbox value="Sun"/>Sun</label>
                       </CheckboxGroup>
                       </div>
-
-                      <div className="setlocation">
-                      <h1>Set Location:</h1>
-                      <select className="placeName" name="placeName" value={this.state.placeid} onChange={this.placeChanged}>
-                        <option value="">Select A Location</option>
-                        {Object.values(this.state.places).map((place) => (<option key={place.id} value={place.id}>{place.name}</option>))}
-                      </select>
+                      <h1> Location: </h1> {(this.state.places[this.props.placeid]||{}).name}
                     <button className="createButton">Create Deal</button>
-                    </div>
                   </form>
             </section>
             <section className='display-deal'>
             <h1>Deals</h1>
                 <div className="wrapper">
-                  <ul>
-                    {console.log(this.state.deals[0] && this.state.deals[0].places)}
-                    {this.state.deals.map((deal) => {
-                      return (
-                        <li className="dealcard" key={deal.id}>
-                          <h3>{deal.dealName}</h3>
-                          <button className="deleteDeal" onClick={() => this.removedeal(deal.id)}>Remove Deal</button>
-                          <img src={deal.img}/>
-                          <p>Deal Price: {deal.price}</p>
-                          <p>Deal Style:{deal.style}</p>
-                          <p>Day's Avalible: {deal.daysAvalable}</p>
-                          <h4>{
-                            this.state.places[deal.placeid] ? this.state.places[deal.placeid].name : ""
-                          }</h4>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  { myDeals.length === 0 ?
+                    "none yet!  let's make a deal!" :
+                    (<ul>
+                        { myDeals.map((deal) => {
+                            return (
+                              <li className="dealcard" key={deal.id}>
+                                <h3>{deal.dealName}</h3>
+                                <button className="deleteDeal" onClick={() => this.removedeal(deal.id)}>Remove Deal</button>
+                                <img src={deal.img}/>
+                                <p>Deal Price: {deal.price}</p>
+                                <p>Deal Style:{deal.style}</p>
+                                <p>Day's Avalible: {deal.daysAvalable}</p>
+                                <h4>{
+                                  this.state.places[deal.placeid] ? this.state.places[deal.placeid].name : ""
+                                }</h4>
+                              </li>
+                            )
+                          })
+                        }
+                      </ul>)
+                  }
                 </div>
             </section>
           </div>

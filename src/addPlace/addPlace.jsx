@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './addPlace.css';
 import firebase from 'firebase/app';
-
+import AddDeal from '../addDeal/addDeal';
 
 
 class AddPlace extends Component {
@@ -13,7 +13,8 @@ class AddPlace extends Component {
       phone: '',
       lat: '',
       lon: '',
-      places: []
+      places: [],
+      placeid: undefined,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,57 +25,75 @@ componentDidMount() {
   const placesRef = firebase.database().ref('places');
   placesRef.on('value', (snapshot) => {
     let places = snapshot.val();
-    let newState = [];
-    for (let item in places) {
-      newState.push({
-        id: item,
-        name: places[item].name,
-        address: places[item].address,
-        phone: places[item].phone,
-        lat: places[item].lat,
-        lon: places[item].lon,
-      });
+    let newPlaces = {};
+    for (let place in places) {
+      newPlaces[place] = {
+        id: place,
+        name: places[place].name
+      };
     }
     this.setState({
-      places: newState
+      places: newPlaces
     });
   });
 }
 
-removeItem(itemId) {
-  const itemRef = firebase.database().ref(`/places/${itemId}`);
-  itemRef.remove();
-}
-
-//look for changes to state
-  handleChange(e) {
-  this.setState({
-    [e.target.name]: e.target.value
-  });
-}
-
-//move info to firebase
-handleSubmit(e) {
-  e.preventDefault();
-  const placesRef = firebase.database().ref('places');
-  const item = {
-    name: this.state.name,
-    address: this.state.address,
-    phone: this.state.phone,
-    lat: this.state.lat,
-    lon: this.state.lon
+  removeplace(placeId) {
+    const placeRef = firebase.database().ref(`/places/${placeId}`);
+    placeRef.remove();
   }
-  placesRef.push(item);
-  this.setState({
-    name: '',
-    address: '',
-    phone: '',
-    lat:'',
-    lon:''
-  });
-}
+
+  //look for changes to state
+    handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  placeChanged = (event) => {
+    this.setState({
+      placeid: event.target.value
+    });
+  }
+
+
+  //move info to firebase
+  handleSubmit(e) {
+    e.preventDefault();
+    const placesRef = firebase.database().ref('places');
+    const place = {
+      name: this.state.name,
+      address: this.state.address,
+      phone: this.state.phone,
+      lat: this.state.lat,
+      lon: this.state.lon
+    }
+    placesRef.push(place);
+    this.setState({
+      name: '',
+      address: '',
+      phone: '',
+      lat:'',
+      lon:''
+    });
+  }
 
   render() {
+    var locationCardJsx = undefined;
+    if (this.state.placeid && this.state.places[this.state.placeid]) {
+      var place = this.state.places[this.state.placeid];
+      locationCardJsx = (
+        <li className="locationplace" key={place.id}>
+          <button className="deletelocation"onClick={() => this.removeplace(place.id)}>Delete Location</button>
+          <h3>{place.name}</h3>
+          <p>{place.address}</p>
+          <p>{place.phone}</p>
+          <p>{place.lat}</p>
+          <p>{place.lon}</p>
+          <AddDeal placeid={place.id}/>
+        </li>
+      );
+    }
     return (
       <div className='newPlace'>
         <header>
@@ -83,7 +102,7 @@ handleSubmit(e) {
             </div>
         </header>
         <div className='container'>
-          <section className='add-item'>
+          <section className='add-place'>
             <form onSubmit={this.handleSubmit}>
               <input className='placeinputs' type="text" name="name" placeholder="Business Name" onChange={this.handleChange} value={this.state.name} />
               <input className='placeinputs' type="text" name="address" placeholder="Business Address (123 1234 Street St, Vancouver, BC V6G1B4)" onChange={this.handleChange} value={this.state.address} />
@@ -93,21 +112,19 @@ handleSubmit(e) {
               <button className='createbusiness'>Create Business</button>
             </form>
           </section>
-          <section className='display-item'>
+
+          <div className="setlocation">
+            <h1>Choose Location:</h1>
+            <select className="placeName" name="placeName" value={this.state.placeid} onChange={this.placeChanged}>
+              <option value="">Select A Location</option>
+              {Object.values(this.state.places).map((place) => (<option key={place.id} value={place.id}>{place.name}</option>))}
+            </select>
+          </div>
+
+          <section className='display-place'>
             <div className="wrapper">
               <ul>
-                {this.state.places.map((item) => {
-                  return (
-                    <li className="locationitem" key={item.id}>
-                      <button className="deletelocation"onClick={() => this.removeItem(item.id)}>Delete Location</button>
-                      <h3>{item.name}</h3>
-                      <p>{item.address}</p>
-                      <p>{item.phone}</p>
-                      <p>{item.lat}</p>
-                      <p>{item.lon}</p>
-                    </li>
-                  )
-                })}
+                {locationCardJsx}
               </ul>
             </div>
           </section>

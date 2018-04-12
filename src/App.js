@@ -74,9 +74,7 @@ getRandomCard(currentCards){
         <div className="buttonRow">
           <PickButton drawCard={this.updateCard} />
         </div>
-        <AdminTable />
         <AddPlace />
-        <AddDeal />
       </div>
     );
   }
