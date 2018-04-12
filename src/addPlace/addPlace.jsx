@@ -76,7 +76,7 @@ handleSubmit(e) {
 
   render() {
     return (
-      <div className='app'>
+      <div className='newPlace'>
         <header>
             <div className='wrapper'>
               <h1>Add A Business</h1>
@@ -85,12 +85,12 @@ handleSubmit(e) {
         <div className='container'>
           <section className='add-item'>
             <form onSubmit={this.handleSubmit}>
-              <input type="text" name="name" placeholder="Business Name" onChange={this.handleChange} value={this.state.name} />
-              <input type="text" name="address" placeholder="Business Address (123 1234 Street St, Vancouver, BC V6G1B4)" onChange={this.handleChange} value={this.state.address} />
-              <input type="text" name="phone" placeholder="Business Phone Number" onChange={this.handleChange} value={this.state.phone} />
-              <input type="text" name="lat" placeholder="Business Latitude" onChange={this.handleChange} value={this.state.lat} />
-              <input type="text" name="lon" placeholder="Business Longitude" onChange={this.handleChange} value={this.state.lon} />
-              <button>Add Item</button>
+              <input className='placeinputs' type="text" name="name" placeholder="Business Name" onChange={this.handleChange} value={this.state.name} />
+              <input className='placeinputs' type="text" name="address" placeholder="Business Address (123 1234 Street St, Vancouver, BC V6G1B4)" onChange={this.handleChange} value={this.state.address} />
+              <input className='placeinputs' type="text" name="phone" placeholder="Business Phone Number" onChange={this.handleChange} value={this.state.phone} />
+              <input className='placeinputs' type="text" name="lat" placeholder="Business Latitude" onChange={this.handleChange} value={this.state.lat} />
+              <input className='placeinputs' type="text" name="lon" placeholder="Business Longitude" onChange={this.handleChange} value={this.state.lon} />
+              <button className='createbusiness'>Create Business</button>
             </form>
           </section>
           <section className='display-item'>
@@ -98,13 +98,13 @@ handleSubmit(e) {
               <ul>
                 {this.state.places.map((item) => {
                   return (
-                    <li key={item.id}>
+                    <li className="locationitem" key={item.id}>
+                      <button className="deletelocation"onClick={() => this.removeItem(item.id)}>Delete Location</button>
                       <h3>{item.name}</h3>
                       <p>{item.address}</p>
                       <p>{item.phone}</p>
                       <p>{item.lat}</p>
                       <p>{item.lon}</p>
-                      <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
                     </li>
                   )
                 })}

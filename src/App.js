@@ -46,8 +46,6 @@ componentWillMount(){
   })
 }
 
-
-
 getRandomCard(currentCards){
   var card = currentCards[Math.floor(Math.random() * currentCards.length)]
   return(card);
