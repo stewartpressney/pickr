@@ -115,51 +115,9 @@ class AddDeal extends Component {
         <div className='newDeal'>
           <header>
               <div className="wrapper">
-                <h1 className="heading">Create New Deal</h1>
               </div>
           </header>
           <div className='container'>
-            <section className='add-deal'>
-                  <form onSubmit={this.handleSubmit}>
-                    <div>
-                      <input className="dealinputs" type="text" name="dealName" placeholder="Deal Name" onChange={this.handleChange} value={this.state.dealName} />
-                      <input className="dealinputs" type="text" name="img" placeholder="Img. URL" onChange={this.handleChange} value={this.state.img} />
-                      <input className="dealinputs" type="text" name="price" placeholder="Deal Price" onChange={this.handleChange} value={this.state.price} />
-                    </div>
-                    <div className="catagory">
-                    <h1>Deal Catagory:</h1>
-                      <CheckboxGroup
-                        checkboxDepth={2} name="style"
-                        value={this.state.style}
-                        onChange={this.styleChanged}
-                        className="CheckboxGroup">
-                        <label><Checkbox value="Food"/>Food</label>
-                        <label><Checkbox value="Drinks"/>Drink</label>
-                        <label><Checkbox value="Date"/>Date</label>
-                        <label><Checkbox value="Fun "/>Fun</label>
-                        <label><Checkbox value="Group"/>Group</label>
-                      </CheckboxGroup>
-                      </div>
-                      <div className="avalibility">
-                      <h1>Day Avalible:</h1>
-                      <CheckboxGroup
-                        checkboxDepth={2} name="daysAvalable"
-                        value={this.state.daysAvalable}
-                        onChange={this.daysChanged}
-                        className="CheckboxGroup">
-                        <label><Checkbox value="Mon"/>Mon</label>
-                        <label><Checkbox value="Tue"/>Tue</label>
-                        <label><Checkbox value="Wed"/>Wed</label>
-                        <label><Checkbox value="Thu"/>Thu</label>
-                        <label><Checkbox value="Fri"/>Fri</label>
-                        <label><Checkbox value="Sat"/>Sat</label>
-                        <label><Checkbox value="Sun"/>Sun</label>
-                      </CheckboxGroup>
-                      </div>
-                      <h1> Location: </h1> {(this.state.places[this.props.placeid]||{}).name}
-                    <button className="createButton">Create Deal</button>
-                  </form>
-            </section>
             <section className='display-deal'>
             <h1>Deals</h1>
                 <div className="wrapper">
@@ -185,6 +143,47 @@ class AddDeal extends Component {
                       </ul>)
                   }
                 </div>
+            </section>
+            <section className='add-deal'>
+              <h1 className="heading">Create New Deal</h1>
+                  <form onSubmit={this.handleSubmit}>
+                    <div>
+                      <input className="dealinputs" type="text" name="dealName" placeholder="Deal Name" onChange={this.handleChange} value={this.state.dealName} />
+                      <input className="dealinputs" type="text" name="img" placeholder="Img. URL" onChange={this.handleChange} value={this.state.img} />
+                      <input className="dealinputs" type="text" name="price" placeholder="Deal Price" onChange={this.handleChange} value={this.state.price} />
+                    </div>
+                    <div className="catagory">
+                    <h1>Deal Catagory:</h1>
+                      <CheckboxGroup className="style"
+                        checkboxDepth={2} name="style"
+                        value={this.state.style}
+                        onChange={this.styleChanged}
+                        className="CheckboxGroup">
+                        <label><Checkbox className="checkbox" value="Food"/>Food</label>
+                        <label><Checkbox className="checkbox" value="Drinks"/>Drink</label>
+                        <label><Checkbox className="checkbox" value="Date"/>Date</label>
+                        <label><Checkbox className="checkbox" value="Fun "/>Fun</label>
+                        <label><Checkbox className="checkbox" value="Group"/>Group</label>
+                      </CheckboxGroup>
+                      </div>
+                      <div className="avalibility">
+                      <button className="createButton">Create Deal</button>
+                      <h1>Day Avalible:</h1>
+                      <CheckboxGroup
+                        checkboxDepth={2} className="daysAvalable" name="daysAvalable"
+                        value={this.state.daysAvalable}
+                        onChange={this.daysChanged}
+                        className="CheckboxGroup">
+                        <label><Checkbox className="checkbox" value=" Mon "/>Mon</label>
+                        <label><Checkbox className="checkbox" value=" Tue "/>Tue</label>
+                        <label><Checkbox className="checkbox" value=" Wed "/>Wed</label>
+                        <label><Checkbox className="checkbox" value=" Thu "/>Thu</label>
+                        <label><Checkbox className="checkbox" value=" Fri "/>Fri</label>
+                        <label><Checkbox className="checkbox" value=" Sat "/>Sat</label>
+                        <label><Checkbox className="checkbox" value=" Sun "/>Sun</label>
+                      </CheckboxGroup>
+                      </div>
+                  </form>
             </section>
           </div>
         </div>

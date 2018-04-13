@@ -10,14 +10,14 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 import { firebaseConfig } from './config/firebase/dbconfig';
 
-
 class App extends Component {
 
 constructor(props){
   super(props);
 
     this.app = firebase.initializeApp(firebaseConfig);
-    this.database = this.app.database().ref().child('cards');
+    this.database = this.app.database();
+    this.placeRef = this.app.database().ref().child('places');
     this.updateCard = this.updateCard.bind(this);
 
 
@@ -28,20 +28,27 @@ constructor(props){
 }
 
 componentWillMount(){
-  const currentCards = this.state.cards;
-  this.database.on('child_added', snap => {
-    currentCards.push({
-      id: snap.key,
-      name: snap.val().name,
-      img: snap.val().img,
-      style: snap.val().style,
-      deal: snap.val().deal,
-      price: snap.val().price,
-      location: snap.val().location,
+  this.database.ref('deals').on('child_added', deal => {
+    const currentCards = this.state.cards;
+    this.database.ref('places').child(deal.val().placeid).once('value').then(place => {
+
+      currentCards.push({
+        id: deal.key,
+        name: place.val().name,
+        img: deal.val().img,
+        style: deal.val().style,
+        daysAvalable: deal.val().daysAvalable,
+        deal: deal.val().dealName,
+        price: deal.val().price,
+        location: place.val().address,
+      })
+      this.setState ({
+        cards: currentCards,
+        currentCard: this.getRandomCard(currentCards)
+      })
     })
-    this.setState ({
-      cards: currentCards,
-      currentCard: this.getRandomCard(currentCards)
+    .catch(err => {
+      console.error(err);
     })
   })
 }
@@ -66,6 +73,7 @@ getRandomCard(currentCards){
         <Card name={this.state.currentCard.name}
               img={this.state.currentCard.img}
               style={this.state.currentCard.style}
+              daysAvalable={this.state.currentCard.daysAvalable}
               deal={this.state.currentCard.deal}
               price={this.state.currentCard.price}
               location={this.state.currentCard.location}
@@ -74,7 +82,7 @@ getRandomCard(currentCards){
         <div className="buttonRow">
           <PickButton drawCard={this.updateCard} />
         </div>
-        <AddPlace />
+        <AdminTable />
       </div>
     );
   }

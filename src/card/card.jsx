@@ -10,10 +10,10 @@ const Card = (props) => (
       <div className="back">
         <div className="name">{props.name}</div>
         <div className="deal">{props.deal}</div>
-        <div className="style">{props.style}</div>
-        <div className="price">{props.price}</div>
-        <div className="location">{props.location}</div>
-        <p className="description">Readymade vinyl chia, semiotics DIY selfies pinterest shoreditch. Health goth hammock direct trade williamsburg craft beer, air plant subway tile. Hoodie yuccie lyft ennui, la croix keytar activated charcoal. Mixtape fixie man braid post-ironic seitan jean shorts.</p>
+        <div className="style">Deal Catagory:   <strong>{props.style}</strong></div>
+        <div className="days">Days Available:   <strong>{props.daysAvalable}</strong></div>
+        <div className="price">Price:   <strong>{props.price}</strong></div>
+        <div className="location">Location:   <strong>{props.location}</strong></div>
       </div>
     </div>
   </div>

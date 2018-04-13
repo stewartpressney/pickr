@@ -96,9 +96,24 @@ componentDidMount() {
     }
     return (
       <div className='newPlace'>
+        <div className="setlocation">
+            <h1>Show A Location:</h1>
+            <select className="placeName" name="placeName" value={this.state.placeid} onChange={this.placeChanged}>
+              <option value="">Select A Location</option>
+              {Object.values(this.state.places).map((place) => (<option key={place.id} value={place.id}>{place.name}</option>))}
+            </select>
+          </div>
+          <section className='display-place'>
+            <div className="wrapper">
+              <ul>
+                {locationCardJsx}
+              </ul>
+            </div>
+          </section>
+
         <header>
             <div className='wrapper'>
-              <h1>Add A Business</h1>
+              <h1>Add A Location</h1>
             </div>
         </header>
         <div className='container'>
@@ -113,21 +128,6 @@ componentDidMount() {
             </form>
           </section>
 
-          <div className="setlocation">
-            <h1>Choose Location:</h1>
-            <select className="placeName" name="placeName" value={this.state.placeid} onChange={this.placeChanged}>
-              <option value="">Select A Location</option>
-              {Object.values(this.state.places).map((place) => (<option key={place.id} value={place.id}>{place.name}</option>))}
-            </select>
-          </div>
-
-          <section className='display-place'>
-            <div className="wrapper">
-              <ul>
-                {locationCardJsx}
-              </ul>
-            </div>
-          </section>
         </div>
       </div>
     );
