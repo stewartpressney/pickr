@@ -1,33 +1,6 @@
-  table,
-  tr {
-    border: 1px solid grey;
-    display: block;
-    padding: 5px;
-  }
-
-  tbody, td {
-    display: block;
-    }
-
-  h1, h2 {
-    display: inline;
-  }
-
-  .placeButton {
-    display: inline;
-    float: right
-  }
-
-  .dealButton {
-    display: inline;
-    float: right
-  }
-
-.placesTable {
-    margin-top: 4em;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
+.heading {
+  margin: 2em;
+}
 
 .placeButton {
   padding: 6px;
@@ -63,4 +36,20 @@
   background: -webkit-linear-gradient(top, #005132 0%, #006e2e 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #005132 0%, #006e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
+}
+
+.parallax {
+    background-image: url("../img/background.png");
+
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.newPlace {
+  margin-left: 6em;
+  margin-right: 6em;
 }

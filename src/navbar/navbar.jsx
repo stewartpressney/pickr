@@ -4,10 +4,11 @@ import './navbar.css';
 
 const Navbar = () => (
 <div className="nav">
-  <ul className="header">
-    <li><a href="/">Home</a></li>
-    <li><a href="/admin">Admin</a></li>
-  </ul>
+  <div className="headermenu">
+    <a className="menuitem" href="/">Card</a>
+    <a className="menuitem" href="/grid">Grid</a>
+    <a className="menuitem" href="/admin">Admin</a>
+  </div>
 </div>
 );
 

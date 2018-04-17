@@ -3,22 +3,19 @@ import './App.css';
 import Card from './card/card';
 import PickButton from './pickButton/pickButton';
 import Navbar from './navbar/navbar';
-import AdminTable from './adminTable/adminTable';
-import AddPlace from './addPlace/addPlace';
-import AddDeal from './addDeal/addDeal';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { firebaseConfig } from './config/firebase/dbconfig';
+// import { Link } from 'react-router-dom';
 
 class App extends Component {
 
 constructor(props){
   super(props);
-
-    this.app = firebase.initializeApp(firebaseConfig);
-    this.database = this.app.database();
-    this.placeRef = this.app.database().ref().child('places');
-    this.updateCard = this.updateCard.bind(this);
+  this.app = firebase.initializeApp(firebaseConfig);
+  this.database = this.app.database();
+  this.placeRef = this.app.database().ref().child('places');
+  this.updateCard = this.updateCard.bind(this);
 
 
   this.state = {
@@ -82,7 +79,6 @@ getRandomCard(currentCards){
         <div className="buttonRow">
           <PickButton drawCard={this.updateCard} />
         </div>
-        <AdminTable />
       </div>
     );
   }

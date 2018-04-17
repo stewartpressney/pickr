@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './addPlace.css';
 import firebase from 'firebase/app';
 import AddDeal from '../addDeal/addDeal';
+import { firebaseConfig } from '../config/firebase/dbconfig';
 
 
 class AddPlace extends Component {
-    constructor() {
+  constructor() {
     super();
+    this.app = firebase.initializeApp(firebaseConfig);
     this.state = {
       name: '',
       address: '',
@@ -97,7 +99,7 @@ componentDidMount() {
     return (
       <div className='newPlace'>
         <div className="setlocation">
-            <h1>Show A Location:</h1>
+            <h1 className="heading">Select A Location:</h1>
             <select className="placeName" name="placeName" value={this.state.placeid} onChange={this.placeChanged}>
               <option value="">Select A Location</option>
               {Object.values(this.state.places).map((place) => (<option key={place.id} value={place.id}>{place.name}</option>))}
@@ -113,7 +115,7 @@ componentDidMount() {
 
         <header>
             <div className='wrapper'>
-              <h1>Add A Location</h1>
+              <h1 className="heading">Create A Location</h1>
             </div>
         </header>
         <div className='container'>

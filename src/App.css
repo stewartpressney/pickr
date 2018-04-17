@@ -1,7 +1,12 @@
 div .App {
-/*  background-image: url("./img/background.png");
-  background-repeat: repeat;
-  height: 100vh;*/
+  background-image: url("./img/background.png");
+
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

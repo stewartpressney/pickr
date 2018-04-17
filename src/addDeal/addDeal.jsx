@@ -4,8 +4,8 @@ import firebase from 'firebase/app';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 
 class AddDeal extends Component {
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
       this.state = {
         dealName: '',
         img: '',
@@ -110,7 +110,7 @@ class AddDeal extends Component {
     // }
 
     render() {
-      var myDeals = this.state.deals.filter(deal => deal.placeid === this.props.placeid);
+      var myDeals = this.state.deals.filter((deal) => { return deal.placeid === this.props.placeid; });
       return (
         <div className='newDeal'>
           <header>
@@ -154,23 +154,25 @@ class AddDeal extends Component {
                     </div>
                     <div className="catagory">
                     <h1>Deal Catagory:</h1>
-                      <CheckboxGroup className="style"
-                        checkboxDepth={2} name="style"
+                      <CheckboxGroup
+                        checkboxDepth={2}
+                        name="style"
                         value={this.state.style}
                         onChange={this.styleChanged}
                         className="CheckboxGroup">
-                        <label><Checkbox className="checkbox" value="Food"/>Food</label>
-                        <label><Checkbox className="checkbox" value="Drinks"/>Drink</label>
-                        <label><Checkbox className="checkbox" value="Date"/>Date</label>
-                        <label><Checkbox className="checkbox" value="Fun "/>Fun</label>
-                        <label><Checkbox className="checkbox" value="Group"/>Group</label>
+                        <label><Checkbox className="checkbox" value=" Food "/>Food</label>
+                        <label><Checkbox className="checkbox" value=" Drinks "/>Drink</label>
+                        <label><Checkbox className="checkbox" value=" Date "/>Date</label>
+                        <label><Checkbox className="checkbox" value=" Fun "/>Fun</label>
+                        <label><Checkbox className="checkbox" value=" Group  "/>Group</label>
                       </CheckboxGroup>
                       </div>
                       <div className="avalibility">
                       <button className="createButton">Create Deal</button>
                       <h1>Day Avalible:</h1>
                       <CheckboxGroup
-                        checkboxDepth={2} className="daysAvalable" name="daysAvalable"
+                        checkboxDepth={2}
+                        name="daysAvalable"
                         value={this.state.daysAvalable}
                         onChange={this.daysChanged}
                         className="CheckboxGroup">
