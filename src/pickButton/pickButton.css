@@ -18,7 +18,13 @@
 
 .button:hover{
   background: #51040D; /* Old browsers */
-
-
 }
 
+
+.button:focus{
+  outline: none;/* Old browsers */
+}
+
+.button:active {
+  background: #930012; /* Old browsers */
+}

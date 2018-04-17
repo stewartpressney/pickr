@@ -5,7 +5,7 @@ const Card = (props) => (
   <div className="card-container">
     <div className="card">
       <div className="front">
-        <div className="img" alt=""><img src={props.img}/></div>
+        <div className="img"><img src={props.img} alt="Descriptive shot of food item"/></div>
       </div>
       <div className="back">
         <div className="name">{props.name}</div>

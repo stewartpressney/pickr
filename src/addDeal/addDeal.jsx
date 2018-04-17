@@ -123,13 +123,13 @@ class AddDeal extends Component {
                 <div className="wrapper">
                   { myDeals.length === 0 ?
                     "none yet!  let's make a deal!" :
-                    (<ul>
+                    (<ul className="deallist">
                         { myDeals.map((deal) => {
                             return (
                               <li className="dealcard" key={deal.id}>
                                 <h3>{deal.dealName}</h3>
                                 <button className="deleteDeal" onClick={() => this.removedeal(deal.id)}>Remove Deal</button>
-                                <img src={deal.img}/>
+                                <img src={deal.img} alt="Descriptive shot of food item"/>
                                 <p>Deal Price: {deal.price}</p>
                                 <p>Deal Style:{deal.style}</p>
                                 <p>Day's Avalible: {deal.daysAvalable}</p>

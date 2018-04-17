@@ -48,21 +48,25 @@ class Grid extends Component {
       (
         <div className="gridSection">
           <Navbar />
-          <ul className="cardGrid">
-          { this.state.cards.map((card, index) => { return (
-              <li>
-                <Card
-                  name={card.name}
-                  img={card.img}
-                  style={card.style}
-                  daysAvalable={card.daysAvalable}
-                  deal={card.deal}
-                  price={card.price}
-                  location={card.location}
-                />
-              </li>
-          )})}
-        </ul>
+          <div className="gridOfCards">
+            <div className="cardGrid">
+              <ul >
+              { this.state.cards.map((card, index) => { return (
+                  <li key={card.id}>
+                    <Card
+                      name={card.name}
+                      img={card.img}
+                      style={card.style}
+                      daysAvalable={card.daysAvalable}
+                      deal={card.deal}
+                      price={card.price}
+                      location={card.location}
+                    />
+                  </li>
+              )})}
+            </ul>
+          </div>
+        </div>
       </div>
        )
     );

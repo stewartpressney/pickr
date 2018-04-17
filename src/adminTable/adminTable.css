@@ -39,17 +39,19 @@
 }
 
 .parallax {
-    background-image: url("../img/background.png");
-
-    height: 100vh;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
 }
 
 .newPlace {
   margin-left: 6em;
   margin-right: 6em;
+  margin-bottom: 12%;
+}
+
+.wrapperdiv {
+  height: 100%;
 }

@@ -7,24 +7,28 @@
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.logo{
-  text-align: left;
-  padding-top: 20px;
-  padding-left: 20px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 2em;
-}
 
 .headermenu {
-  margin-top: 14px;
+  margin-top: 20px;
   display: inline;
   float: right;
 }
 
 .menuitem {
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 30px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+
+ }
+
+ .logo {
+  margin-top: 14px;
+  float: left;
+  text-decoration: none;
+  margin-left: 20px;
   color: white;
   font-family: 'arvo';
   font-size: 2em;
