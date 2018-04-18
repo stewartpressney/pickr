@@ -22,6 +22,9 @@
 
 .createbusiness {
   margin-top: 1em;
+  margin-top: 1em;
+  float: right;
+  margin-bottom: 20px;
 }
 
 .locationitem {
@@ -31,12 +34,35 @@
   padding: 1em;
 }
 
-.deletelocation {
-  float: right;
-}
-
 .add-place {
   margin-left: 2em;
   margin-right: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.deletelocation {
+  float: right;
+  text-align:center;
+  text-decoration:none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background: #930012;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+
+
+.deletelocation:hover{
+  background: #51040D; /* Old browsers */
+}
+
+
+.deletelocation:focus{
+  outline: none;/* Old browsers */
+}
+
+.deletelocation:active {
+  background: #930012; /* Old browsers */
 }

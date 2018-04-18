@@ -47,11 +47,18 @@
 }
 
 .newPlace {
-  margin-left: 6em;
-  margin-right: 6em;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 12%;
+  width: 500px;
 }
 
 .wrapperdiv {
   height: 100%;
+}
+
+
+.AddPlace {
+  position: relative;
+  margin: auto;
 }

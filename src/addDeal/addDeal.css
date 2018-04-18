@@ -21,26 +21,32 @@
 
 .catagory {
   margin-top: 2em;
+  text-align: left;
 }
 
 .style {
   margin-top: 1em;
+  text-align: left;
 }
 
 .daysAvalable {
   margin-top: 1em;
+  text-align: left;
 }
 
 .avalibility {
   margin-top: 2em;
+  text-align: left;
 }
 
 .setlocation {
   margin-top: 2em;
+  text-align: left;
 }
 
 .placeName {
   margin-left: 2em;
+  text-align: left;
 }
 
 .createButton{
@@ -48,8 +54,56 @@
   margin-left: 2em;
 }
 
-.deleteDeal{
+.createButton {
   float: right;
+  text-align:center;
+  text-decoration:none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background: #1F8C5A;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.createButton:hover{
+  background: #16613F; /* Old browsers */
+}
+
+
+.createButton:focus{
+  outline: none;/* Old browsers */
+}
+
+.createButton:active {
+  background: #1F8C5A; /* Old browsers */
+}
+
+.deleteDeal {
+  float: right;
+  text-align:center;
+  text-decoration:none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background: #930012;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.deleteDeal:hover{
+  background: #51040D; /* Old browsers */
+}
+
+
+.deleteDeal:focus{
+  outline: none;/* Old browsers */
+}
+
+.deleteDeal:active {
+  background: #930012; /* Old browsers */
 }
 
 .checkbox{

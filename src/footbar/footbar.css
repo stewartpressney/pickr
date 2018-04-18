@@ -1,0 +1,70 @@
+.foot {
+  overflow: hidden;
+  background: #930012; /* Old browsers */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#005132',GradientType=0 ); /* IE6-9 */
+  color: white;
+  height: 80px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+
+.headermenu {
+  margin-top: 20px;
+  display: inline;
+  float: right;
+}
+
+.menuitem {
+  text-decoration: none;
+  margin-right: 30px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+
+ }
+
+ .tagline {
+  margin-top: 24px;
+  float: left;
+  text-decoration: none;
+  margin-left: 40px;
+  color: white;
+  font-family: 'arvo';
+  font-size: 2em;
+
+ }
+
+.downloadbutton {
+  float: right;
+  margin-top: 16px;
+  margin-right: 40px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  text-align:center;
+  text-decoration:none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background: #51040D;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.downloadbutton:hover{
+  background: #930012; /* Old browsers */
+}
+
+
+.downloadbutton:focus{
+  outline: none;/* Old browsers */
+}
+
+.downloadbutton:active {
+  background: #51040D; /* Old browsers */
+}

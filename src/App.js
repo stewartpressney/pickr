@@ -3,6 +3,7 @@ import './App.css';
 import Card from './card/card';
 import PickButton from './pickButton/pickButton';
 import Navbar from './navbar/navbar';
+import Footbar from './footbar/footbar';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { firebaseConfig } from './config/firebase/dbconfig';
@@ -79,6 +80,7 @@ getRandomCard(currentCards){
         <div className="buttonRow">
           <PickButton drawCard={this.updateCard} />
         </div>
+        <Footbar className="footbar" />
       </div>
     );
   }
