@@ -4,20 +4,25 @@ ul {
   flex-flow: row wrap;
   justify-content: space-around;
   list-style: none;
+  background: none;
+  min-height: 100vh;
 }
 
 li {
   list-style: none;
+  background: none;
   margin: 10px;
-
 }
 
 .gridSection {
     background-image: url('../img/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: absolute;
+    top: 0;
+    left: 0;
     padding-bottom: 100px;
     padding-top: 50px;
-    height: 100%;
+    background-size: cover;
 }
+
