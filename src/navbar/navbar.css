@@ -1,15 +1,21 @@
 .nav{
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #930012; /* Old browsers */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#005132',GradientType=0 ); /* IE6-9 */
   color: white;
   height: 60px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  z-index: 100;
 }
 
 
 .headermenu {
   margin-top: 20px;
+  margin-right: 20px;
   display: inline;
   float: right;
 }
@@ -28,9 +34,13 @@
   margin-top: 14px;
   float: left;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 40px;
   color: white;
   font-family: 'arvo';
   font-size: 2em;
 
+ }
+
+ .wrapper {
+  margin-bottom: 100px;
  }

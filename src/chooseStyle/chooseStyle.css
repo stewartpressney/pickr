@@ -16,16 +16,15 @@
 }
 
 .placeinputs {
-  width: 80%;
+  width: 100%;
   margin-top: 1em;
-  padding: 1em;
-  border-radius: 5px;
 }
 
-.placeinputs:focus {
-  outline: none;
-  border-bottom: 2px solid #1F8C5A;
-  border-right: 2px solid #1F8C5A;
+.createbusiness {
+  margin-top: 1em;
+  margin-top: 1em;
+  float: right;
+  margin-bottom: 20px;
 }
 
 .locationitem {
@@ -66,31 +65,4 @@
 
 .deletelocation:active {
   background: #930012; /* Old browsers */
-}
-
-.createbusiness {
-  margin-top: 1em;
-  float: right;
-  text-align:center;
-  text-decoration:none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  background: #1F8C5A;
-  color: white;
-  border-radius: 5px;
-  padding: 4px;
-  margin-bottom: 4px;
-}
-
-.createbusiness:hover{
-  background: #16613F; /* Old browsers */
-}
-
-
-.createbusiness:focus{
-  outline: none;/* Old browsers */
-}
-
-.createbusiness:active {
-  background: #1F8C5A; /* Old browsers */
 }

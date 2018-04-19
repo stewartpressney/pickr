@@ -6,9 +6,18 @@
 }
 
 .dealinputs {
-  width: 100%;
+  width: 80%;
   margin-top: 1em;
+  padding: 1em;
+  border-radius: 5px;
 }
+
+.dealinputs:focus {
+  outline: none;
+  border-bottom: 2px solid #1F8C5A;
+  border-right: 2px solid #1F8C5A;
+}
+
 
 .deallist {
   list-style: none;
@@ -17,6 +26,7 @@
 
 .heading {
   margin-top: 2em;
+  float: left;
 }
 
 .catagory {

@@ -6,7 +6,7 @@
   perspective: 800px;
   position: relative;
   margin: auto;
-  margin-top: 4%;
+  padding-top: 8%;
 
 }
 
@@ -30,6 +30,7 @@
   border-radius: 10px;
   backface-visibility: hidden;
   transform: rotateX(180deg);
+  transform: rotate3d(360deg);
   transform-style: preserve-3d;
 }
 

@@ -8,9 +8,9 @@ const Navbar = () => (
     <a className="logo" href="/">GastownEats.ca</a>
   </div>
   <div className="headermenu">
-    <a className="menuitem" href="/">CARD</a>
-    <a className="menuitem" href="/grid">GRID</a>
-    <a className="menuitem" href="/admin">ADMIN</a>
+    <a className="menuitem" href="/">SEARCH</a>
+    <a className="menuitem" href="/grid">EXPLORE</a>
+{/*    <a className="menuitem" href="/admin">ADMIN</a>*/}
   </div>
 </div>
 );
